@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Yash 🎉</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#cceeff,#e6f7ff);
+  font-family:Comic Sans MS, cursive;
+  overflow:hidden;
+}
+
+h1{
+  font-size:60px;
+  color:#0077b6;
+  text-shadow:2px 2px white;
+  text-align:center;
+}
+
+button{
+  margin-top:50px;
+  font-size:28px;
+  padding:15px 30px;
+  border:none;
+  border-radius:10px;
+  background:#00b4d8;
+  color:white;
+  cursor:pointer;
+  transition:all 0.3s ease;
+}
+
+button:hover{
+  background:#0096c7;
+  transform:scale(1.05);
+}
+
+/* Fade out animation */
+.fade{
+  animation:fadeOut 1s forwards;
+}
+
+@keyframes fadeOut{
+  to{opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<h1>Happy Birthday Yash 🎉</h1>
+<button id="openBtn">Click Here</button>
+
+<script>
+document.getElementById("openBtn").onclick = function(){
+  document.body.classList.add("fade");
+  setTimeout(()=>{
+    window.location.href="surprise.html";
+  },1000);
+}
+</script>
+
+</body>
+</html>
