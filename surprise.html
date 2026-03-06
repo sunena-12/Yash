@@ -19,25 +19,13 @@ body{
   font-size:48px;
   color:#0077b6;
   font-weight:bold;
-  text-shadow: 2px 2px white;
+  text-shadow:2px 2px white;
 }
 
 /* Cake */
 #cake{
   width:280px;
   margin-top:30px;
-}
-
-/* Real balloon images */
-.balloon{
-  position:absolute;
-  bottom:-150px;
-  width:80px;
-  animation:float 12s infinite;
-}
-
-@keyframes float{
-  to{transform:translateY(-120vh);}
 }
 
 /* Hearts */
@@ -76,26 +64,24 @@ p{
 
 <body>
 
-<!-- Banner -->
 <div id="banner">🎉 Happy Birthday Yash! 🎉</div>
 
-<!-- Doctor theme cake -->
-<img id="cake" src="2.png">
+<!-- Cake Image -->
+<img id="cake" src="./2.png" alt="Birthday Cake">
 
 <p>We hope you have a wonderful day full of smiles 🎈💙</p>
 
-<!-- Heart icons floating -->
+<!-- Hearts -->
 <img class="heart" style="left:20%;animation-delay:1s" src="https://cdn-icons-png.flaticon.com/512/833/833472.png">
 <img class="heart" style="left:50%;animation-delay:2s" src="https://cdn-icons-png.flaticon.com/512/833/833472.png">
 <img class="heart" style="left:75%;animation-delay:3s" src="https://cdn-icons-png.flaticon.com/512/833/833472.png">
 
 <!-- Music -->
 <audio autoplay loop>
-  <source src="https://www2.cs.uic.edu/~i101/SoundFiles/HappyBirthday.mid" type="audio/midi">
+  <source src="https://www2.cs.uic.edu/~i101/SoundFiles/HappyBirthday.mid">
 </audio>
 
 <script>
-// Generate random confetti
 for(let i=0;i<70;i++){
   let c=document.createElement("div");
   c.className="confetti";
@@ -107,5 +93,4 @@ for(let i=0;i<70;i++){
 </script>
 
 </body>
-
 </html>
