@@ -5,6 +5,7 @@
 <title>Happy Birthday Yash</title>
 
 <style>
+
 body{
   margin:0;
   font-family:Comic Sans MS, cursive;
@@ -22,10 +23,27 @@ body{
   text-shadow:2px 2px white;
 }
 
-/* Cake */
+/* Cake Image */
 #cake{
   width:280px;
   margin-top:30px;
+}
+
+/* Message */
+p{
+  font-size:26px;
+  color:#333;
+}
+
+/* Music Button */
+#musicBtn{
+  padding:12px 25px;
+  font-size:18px;
+  border:none;
+  border-radius:10px;
+  background:#0077b6;
+  color:white;
+  cursor:pointer;
 }
 
 /* Hearts */
@@ -46,7 +64,6 @@ body{
   width:10px;
   height:10px;
   top:-10px;
-  background:red;
   animation:fall 5s linear infinite;
 }
 
@@ -54,11 +71,6 @@ body{
   to{transform:translateY(110vh) rotate(360deg);}
 }
 
-p{
-  font-size:26px;
-  color:#333;
-  margin-top:15px;
-}
 </style>
 </head>
 
@@ -66,22 +78,31 @@ p{
 
 <div id="banner">🎉 Happy Birthday Yash! 🎉</div>
 
-<!-- Cake Image -->
-<img id="cake" src="./2.png" alt="Birthday Cake">
+<img id="cake" src="2.png" alt="Birthday Cake">
 
 <p>We hope you have a wonderful day full of smiles 🎈💙</p>
 
-<!-- Hearts -->
+<button id="musicBtn" onclick="playMusic()">▶ Play Birthday Music</button>
+
+<!-- Music -->
+<audio id="music" loop>
+  <source src="1.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Floating hearts -->
 <img class="heart" style="left:20%;animation-delay:1s" src="https://cdn-icons-png.flaticon.com/512/833/833472.png">
 <img class="heart" style="left:50%;animation-delay:2s" src="https://cdn-icons-png.flaticon.com/512/833/833472.png">
 <img class="heart" style="left:75%;animation-delay:3s" src="https://cdn-icons-png.flaticon.com/512/833/833472.png">
 
-<!-- Music -->
-<audio autoplay loop>
-  <source src="1.mp3">
-</audio>
-
 <script>
+
+/* Play Music */
+function playMusic(){
+  var music = document.getElementById("music");
+  music.play();
+}
+
+/* Confetti Generator */
 for(let i=0;i<70;i++){
   let c=document.createElement("div");
   c.className="confetti";
@@ -90,8 +111,8 @@ for(let i=0;i<70;i++){
   c.style.animationDuration=(3+Math.random()*3)+"s";
   document.body.appendChild(c);
 }
+
 </script>
 
 </body>
 </html>
-
